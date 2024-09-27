@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option go_package = "gprc-test/idl";
+
+service HeartbeatService {
+  rpc heartbeat(HeartbeatReq) returns (HeartbeatReply);
+}
+
+
+message HeartbeatReq {
+  repeated int64 data = 1;
+}
+
+message HeartbeatReply {
+  int32 errno = 1;
+}
+
+
